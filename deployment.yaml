@@ -6,6 +6,8 @@ metadata:
   name: gitops-nginx
 spec:
   replicas: 2
+  serviceAccountName: build-robot
+  automountServiceAccountToken: false
   selector:
     matchLabels:
       app: gitops-nginx
